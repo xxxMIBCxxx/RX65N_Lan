@@ -87,8 +87,11 @@ void main(void)
     char    ver[128];
 
 
-    PORTA.PDR.BIT.B5 = 1;
-    PORTA.PODR.BIT.B5 = 1;
+    PORTA.PDR.BIT.B6 = 1;
+    PORTA.PODR.BIT.B6 = 0;
+    R_BSP_SoftwareDelay(200, BSP_DELAY_MICROSECS);
+    PORTA.PODR.BIT.B6 = 1;
+    R_BSP_SoftwareDelay(200, BSP_DELAY_MICROSECS);
 
 
     /* cast from uint8_t to char* */
